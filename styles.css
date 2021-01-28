@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  overflow: hidden;
+}
+
+:root {
+  --pink: #ff4584;
+  --blue: #719FDD;
+}
+
+::selection {
+  background: var(--pink);
+  color: #fff;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+section .imgBox {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background: url(images/champion-vayne-heartseeker-splash.jpg);
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+section .imgBox::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(255deg, #eE1E63, #03A9F4);
+  mix-blend-mode: screen;
+  z-index: 1;
+}
+
+section .imgBox p {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 1px;
+  font-size: 50px;
+  word-wrap: break-word;
+  font-family: monospace;
+  white-space: pre-wrap;
+  color: rgba(255,255,255, 0.7);
+}
+
+section .imgBox h2 {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: rgba(255,255,255, 0.7);
+}
+
+section .contentBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+}
+
+section .contentBox .formBox {
+  width: 50%;
+}
+
+section .contentBox .formBox {
+  width: 70%;
+  padding: 30px;
+  box-shadow: 10px 10px 150px var(--pink), -10px -10px 150px var(--blue);
+  border-radius: 10px;
+}
+
+section .contentBox .formBox h2 {
+  color: var(--blue);
+  font-weight: 600;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  border-bottom: 4px solid var(--pink);
+  display: inline-block;
+  letter-spacing: 1px;
+}
+
+section .contentBox .formBox .inputBox {
+  margin-bottom: 20px;
+}
+
+section .contentBox .formBox .inputBox span {
+  font-size: 16px;
+  margin-bottom: 5px;
+  display: inline-block;
+  color: var(--blue);
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+section .contentBox .formBox .inputBox input {
+  width: 100%;
+  padding: 10px 20px;
+  font-weight: 400;
+  border: 1px solid var(--blue);
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: var(--blue);
+  background: transparent;
+  border-radius: 5px;
+}
+
+section .contentBox .formBox .inputBox input[type="submit"] {
+  background: var(--pink);
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+}
+
+section .contentBox .formBox .inputBox input[type="submit"]:hover {
+  background: #f53677;
+}
+
+section .contentBox .formBox .remember {
+  margin-bottom: 10px;
+  color: var(--blue);
+  font-weight: 400;
+  font-size: 14px;
+}
+
+section .contentBox .formBox .remember label {
+  width: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+section .contentBox .formBox .inputBox p {
+  color: var(--blue);
+}
+
+section .contentBox .formBox .inputBox p a {
+  color: var(--pink);
+  text-decoration: none;
+}
+
+section .contentBox .formBox h3 {
+  color: var(--blue);
+  text-align: center;
+  margin: 50px 0 10px;
+  font-weight: 500;
+}
+
+section .contentBox .formBox .sci {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section .contentBox .formBox .sci li {
+  list-style: none;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--blue);
+  border-radius: 50%;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+section .contentBox .formBox .sci li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+section .contentBox .formBox .sci li:hover {
+  background: var(--pink);
+}
+
+section .contentBox .formBox .sci li img {
+  width: 30px;
+  filter: invert(1);
+}
+
+@media (max-width:1200px) {
+  section .imgBox p {
+    display: none;
+  }
+}
+
+@media (max-width:768px) {
+  section .imgBox {
+    position: absolute;
+    width: 100%;
+  }
+  section .imgBox h2 {
+    display: none;
+  }
+  section .contentBox {
+    width: 100%;
+    z-index: 1;
+  }
+  section .contentBox .formBox {
+    width: 100%;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    margin: 50px;
+  }
+  section .contentBox .formBox h3 {
+    margin: 30px 0 10px;
+  }
+}
+
+@media (max-width:768px) {
+  section .contentBox .formBox {
+    margin: 30px;
+  }
+}
